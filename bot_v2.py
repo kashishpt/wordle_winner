@@ -1,6 +1,3 @@
-import numpy as np
-import pandas as pd
-# from os import path
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import time
@@ -9,7 +6,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 from enum import Enum
 import re
-from next import get_next
+from weights.next import get_next
 
 # set up an enum to symbolize which characters are present.
 # this will help with readability

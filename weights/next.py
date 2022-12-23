@@ -70,14 +70,3 @@ def get_next(words, gen_weights=False):
         df = pd.DataFrame(weights).sort_values('weight', ascending=False).set_index('word')
 
         df.to_csv('./weights.csv')
-
-
-words = []
-with open('./words.txt', 'r') as file:
-    line = file.readline()
-
-    # all the words are stored in one line, without any explicit delimiters
-    # to save space, since we know each word is 5 characters long
-    words = [line[i:i+5] for i in range(0, len(line), 5)]
-
-get_next(words, gen_weights=True)
